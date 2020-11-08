@@ -34,6 +34,17 @@ class BlogService {
     this.getMyBlogs()
   }
 
+  async editBlog(editedBlog, id) {
+    try {
+      console.log(editedBlog)
+      console.log(id)
+      await api.put('api/blogs/' + id, editedBlog)
+      this.getActiveBlog(id)
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
   async getMyBlogs() {
     try {
       const res = await api.get('api/profile/blogs')

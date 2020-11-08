@@ -5,7 +5,7 @@
     <router-link :to="{name: 'Blog', params: {blogId: blog._id}}" class="text-dark">
       <h1>{{ blog.title }}</h1>
     </router-link>
-    <!-- {{ blog }} -->
+    {{ blog }}
   </div>
 </template>
 
