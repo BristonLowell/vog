@@ -1,6 +1,9 @@
 <template>
   <div class="home container-fluid">
     <div class="row justify-content-center">
+      <div class="col-12 display-1 text-center mb-3">
+        <b class="border-bottom border-dark">Blogs</b>
+      </div>
       <blog-component v-for="blog in blogs" :key="blog" :blog-prop="blog" />
     </div>
   </div>

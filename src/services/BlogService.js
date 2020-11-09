@@ -5,7 +5,7 @@ class BlogService {
   async getAllBlogs() {
     try {
       const res = await api.get('api/blogs')
-      AppState.blogs = res.data
+      AppState.blogs = res.data.filter(c => c.creator != null)
     } catch (error) {
       console.error(error)
     }
