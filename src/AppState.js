@@ -7,7 +7,7 @@ export const AppState = reactive({
   blogs: [],
   myBlogs: [],
   activeBlog: {},
-  activeComments: []
+  comments: []
 })
 
 export function ClearAppState() {
