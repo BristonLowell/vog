@@ -1,4 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
+import { ClearAppState } from '../AppState'
 // @ts-ignore
 import Home from '../pages/Home.vue'
 // @ts-ignore
@@ -10,12 +11,14 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    beforeEnter: ClearAppState
   },
   {
     path: '/blog/:blogId',
     name: 'Blog',
-    component: BlogPage
+    component: BlogPage,
+    beforeEnter: ClearAppState
   },
   {
     path: '/profile',

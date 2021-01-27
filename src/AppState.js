@@ -9,3 +9,9 @@ export const AppState = reactive({
   activeBlog: {},
   activeComments: []
 })
+
+export function ClearAppState() {
+  AppState.myBlogs = []
+  AppState.activeBlog = {}
+  AppState.activeComments = []
+}
